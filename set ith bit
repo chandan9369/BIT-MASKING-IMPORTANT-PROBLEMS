@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+using namespace std;
+int Set(int a, int k)
+{
+    int mask = a | (1 << k);
+    return mask;
+}
+int main()
+{
+    int a;
+    cin >> a;
+    int k;
+    cin >> k;
+    cout << "After setting " << k << "th bit number " << a << " become " << Set(a, k);
+    return 0;
+}
