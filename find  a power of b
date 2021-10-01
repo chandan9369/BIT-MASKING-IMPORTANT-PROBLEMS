@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+int expo(int a, int b)
+{
+    int res = 1;
+    while (b != 0)
+    {
+        if ((b & (1)) != 0)
+        {
+            res = res * a;
+        }
+        a = a * a;
+        b = b / 2;
+    }
+    return res;
+}
+int main()
+{
+    int n, m;
+    cin >> n >> m;
+    cout << m << " to the power of " << n << " is " << expo(n, m) << endl;
+    return 0;
+}
