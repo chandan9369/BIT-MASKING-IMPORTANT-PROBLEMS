@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+int rangeClear(int n, int i, int j)
+{
+    int mask1 = (~0) << (j + 1);
+    int mask2 = pow(2, i) - 1;
+    return (n & (mask1 | mask2));
+}
+int replace(int a, int b, int i, int j)
+{
+    //1st clear bits in range of (i,j) in n
+    int num = rangeClear(a, i, j);
+    int mask = b << (i - 1);
+    int res = (num | mask);
+    return res;
+}
+int main()
+{
+    int n;
+    int m;
+    cin >> n >> m;
+    int i, j;
+    cin >> i >> j;
+    cout << "after replacing bits in " << n <<
+    " by bits of " << m << " we get " << replace(n, m, i, j) << endl;
+    return 0;
+}
