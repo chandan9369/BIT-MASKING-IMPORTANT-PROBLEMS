@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+using namespace std;
+bool isCheck(int a)
+{
+    int mask = a & (1);
+    if (mask)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+int main()
+{
+    int a;
+    cin >> a;
+
+    if (isCheck(a))
+    {
+        cout << "Number is even" << endl;
+    }
+    else
+    {
+        cout << "Number is odd" << endl;
+    }
+    return 0;
+}
