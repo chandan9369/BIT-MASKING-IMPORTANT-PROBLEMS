@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+using namespace std;
+int clearLast(int a, int k)
+{
+    int mask = ((~0) << k);
+    int res = mask & a;
+    return res;
+}
+int main()
+{
+    int a;
+    int k;
+    cin >> a >> k;
+    cout << "After clearing last " << k << "th bit of number " << a << " we get " << clearLast(a, k) << endl;
+    return 0;
+}
