@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+using namespace std;
+int clear(int a, int k)
+{
+    int mask = (~(1 << k)) & (a);
+    return mask;
+}
+int main()
+{
+    int a;
+    int k;
+    cin >> a;
+    cin >> k;
+    cout << "After clearing " << k << "th bit of number " << a << " we get " << clear(a, k) << endl;
+    return 0;
+}
