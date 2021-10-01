@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;                                    
+int rangeClear(int n, int i, int j)
+{
+    int mask1 = (~0) << (j + 1);
+    int mask2 = pow(2, i) - 1;
+    return (n & (mask1 | mask2));
+}
+int main()
+{
+    int a;
+    int r1, r2;
+    cin >> a >> r1 >> r2;
+    cout << " after clearing bits from " << r1 << " to "
+         << r2 << " in number " << a << " we get " << rangeClear(a, r1, r2);
+
+    return 0;
+}
