@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+using namespace std;
+int get(int a, int k)
+{
+    int mask = 1 & (a >> k);
+    return mask;
+}
+int main()
+{
+    int a;
+    cin >> a;
+    int k;
+    cin >> k;
+    cout << k << "th bit of number " << a << " is " << get(a, k) << endl;
+    return 0;
+}
